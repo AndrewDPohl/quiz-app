@@ -1,0 +1,28 @@
+<h1 class="col-lg-12">Quiz Page</h1>
+
+<div class="quiz-container col-lg-6">
+<h2>Use the form below to create a new quiz</h2>
+  <form>
+    <div class="form-group">
+      <label for="questions">Question</label>
+      {{input type="text" value=question class="form-control" id="question" aria-describedby="questions" placeholder="Type a questions here"}}
+    </div>
+    <div class="form-group">
+      <label for="answers">Answer</label>
+      {{textarea type="text" value=answer class="form-control" id="answer" placeholder="Type the answer here"}}
+    </div>
+    <button type="submit" {{action 'getQuestion'}} class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div class="generated-quiz-container col-lg-6">
+  <h2>Generated Question/Answer Pairs</h2>
+  <h2 class="alert-message">{{alert}}</h2>
+  <h3>Question: {{question}}</h3>
+  <h3>Answer: {{answer}}</h3>
+</div>
+
+
+<div class="final-quiz-container col-lg-offset-1 col-lg-10">
+  <h1 style="text-align: center">THIS IS WHERE THE QUIZ SHOULD GO</h1>
+</div>
